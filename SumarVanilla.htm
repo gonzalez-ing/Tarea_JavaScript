@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Sumar Vainilla</title>
+    </head>
+    <body>
+        <h1 id="header">VANILLA</h1>
+        <h2>Digite dos N&uacutemeros</h2>
+        <label for="">Num. 1:</label>
+        <input type="text" id="num1">
+        <br><br>
+        <label for="">Num. 2:</label>
+        <input type="text" id="num2">
+        <br><br>
+        <input type="button" id="sumar_button" value="Sumar">
+        <h4 id="footer"></h4>
+    </body>
+    <script>
+        document.getElementById("sumar_button").onclick = function() {
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            var suma = parseInt(n1) + parseInt(n2);
+            document.getElementById("footer").innerHTML = "El resultado es: " + suma;    
+      }
+    </script>
+</html>

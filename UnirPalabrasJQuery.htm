@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Uniendo palabras JQUERY</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <h2 id="header">FRAMEWORK</h2>
+    <form>
+      <h2>Introduzca Dos Palabras</h2>
+        <label for="">Palabra Num.1:</label>
+        <input type="text" id="text1" >
+        <br><br>
+        <label for="">Palabra Num. 2:</label>
+        <input type="text" id="text2">
+        <br><br>
+        <input type="button" id="Unir_button" value="Unir Oracion">
+        <h5 id="footer"></h5>
+    </form>
+
+    <script>
+      $('#Unir_button').on('click', function(e) {
+        var txt1 = $("#text1").val();
+        var txt2 = $("#text2").val();
+        var unir = txt1 + " "+ txt2;
+        $("#footer").html("La oracion es: " + unir);
+      });
+    </script>
+  </body>
+</html>
